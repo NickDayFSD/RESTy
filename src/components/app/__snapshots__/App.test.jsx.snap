@@ -2,8 +2,87 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div
+    class="App"
+  >
+    <header
+      class="Header"
+      style="padding: 5px; margin: 0px; display: flex; justify-content: center;"
+    >
+      <h1>
+        RESTy
+      </h1>
+    </header>
+    <main>
+      <form>
+        <label />
+        <input />
+        <label
+          for="get"
+        >
+          GET
+        </label>
+        <input
+          id="get"
+          name="CRUD"
+          type="radio"
+          value="GET"
+        />
+        <label
+          for="post"
+        >
+          POST
+        </label>
+        <input
+          id="post"
+          name="CRUD"
+          type="radio"
+          value="POST"
+        />
+        <label
+          for="put"
+        >
+          PUT
+        </label>
+        <input
+          id="put"
+          name="CRUD"
+          type="radio"
+          value="PUT"
+        />
+        <label
+          for="patch"
+        >
+          PATCH
+        </label>
+        <input
+          id="patch"
+          name="CRUD"
+          type="radio"
+          value="PATCH"
+        />
+        <label
+          for="delete"
+        >
+          DELETE
+        </label>
+        <input
+          id="delete"
+          name="CRUD"
+          type="radio"
+          value="DELETE"
+        />
+        <button>
+          GO!
+        </button>
+      </form>
+      <h2
+        style="display: float;"
+      >
+        LOADING RESULTS
+      </h2>
+      <p />
+    </main>
+  </div>
 </DocumentFragment>
 `;

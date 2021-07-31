@@ -9,7 +9,7 @@ export default class Resty extends Component {
   state = {
     url: '',
     loading: false,
-    results: [],
+    results: ['nothing to see here...'],
     pastSearches: [],
   };
 

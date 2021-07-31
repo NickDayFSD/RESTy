@@ -19,14 +19,13 @@ export default class Resty extends Component {
 
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
-    console.log(this.state.url);
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ loading: true });
     const results = await fetcher(this.state.url);
-    console.log(results);
+    console.log('HANDLESUBMIT', results);
     this.setState({ results, loading: false });
   };
 

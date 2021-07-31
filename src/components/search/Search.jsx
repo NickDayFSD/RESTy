@@ -1,9 +1,15 @@
 import React from 'react';
 
 const searchField = ({ url, onChange, onSubmit }) => (
-  <form>
-    <label />
-    <input />
+  <form onSubmit={onSubmit}>
+    <label htmlFor="url" type="text" />
+    <input
+      id="url"
+      placeholder="url"
+      name="url"
+      value={url}
+      onChange={onChange}
+    />
 
     <label htmlFor="get">GET</label>
     <input id="get" type="radio" name="CRUD" value="GET" />

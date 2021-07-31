@@ -13,25 +13,35 @@ export default class Resty extends Component {
     pastSearches: [],
   };
 
+  componentDidCatch(error, errorInfo) {
+    console.log(error, errorInfo);
+  }
+
   handleChange = ({ target }) => {
     this.setState({ [target.name]: target.value });
+    console.log(this.state.url);
   };
 
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ loading: true });
     const results = await fetcher(this.state.url);
+    console.log(results);
     this.setState({ results, loading: false });
   };
 
   render() {
-    const { url, loading, results, pastSearches } = this.state;
+    const { url, loading, results } = this.state;
 
     return (
       <>
-        <SearchField url={url} onChange={this.handleChange} />
+        <SearchField
+          url={url}
+          onChange={this.handleChange}
+          onSubmit={this.handleSubmit}
+        />
         <Loader loading={loading} />
-        <Results results={results} onSubmit={this.handleSubmit} />
+        <Results results={results} />
       </>
     );
   }

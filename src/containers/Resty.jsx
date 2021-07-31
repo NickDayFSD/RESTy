@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import fetcher from '../components/services/apiCrud';
+
 import SearchField from '../components/search/Search';
 import Loader from '../components/loader/Loading';
+import Results from '../components/results/Results';
 
 export default class Resty extends Component {
   state = {
@@ -17,7 +20,7 @@ export default class Resty extends Component {
   handleSubmit = async (e) => {
     e.preventDefault();
     this.setState({ loading: true });
-    const results = await // insert fetch function here
+    const results = await fetcher(this.state.url);
     this.setState({ results, loading: false });
   };
 
@@ -28,7 +31,7 @@ export default class Resty extends Component {
       <>
         <SearchField url={url} onChange={this.handleChange} />
         <Loader loading={loading} />
-        <p></p>
+        <Results results={results} onSubmit={this.handleSubmit} />
       </>
     );
   }

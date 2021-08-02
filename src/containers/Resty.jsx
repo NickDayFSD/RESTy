@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import fetcher from '../components/services/apiCrud';
 
 import SearchField from '../components/search/Search';
-import Loader from '../components/loader/Loading';
 import Results from '../components/results/Results';
 
+// eslint-disable-next-line no-unused-vars
 import styles from './Resty.css';
 
 export default class Resty extends Component {
@@ -36,12 +36,14 @@ export default class Resty extends Component {
 
     return (
       <>
-        <SearchField
-          url={url}
-          onChange={this.handleChange}
-          onSubmit={this.handleSubmit}
-        />
-        <Results results={results} loading={loading} />
+        <div>
+          <SearchField
+            url={url}
+            onChange={this.handleChange}
+            onSubmit={this.handleSubmit}
+          />
+          <Results results={results} loading={loading} />
+        </div>
       </>
     );
   }

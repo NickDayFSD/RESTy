@@ -41,8 +41,7 @@ export default class Resty extends Component {
           onChange={this.handleChange}
           onSubmit={this.handleSubmit}
         />
-        <Loader loading={loading} />
-        <Results results={results} />
+        <Results results={results} loading={loading} />
       </>
     );
   }

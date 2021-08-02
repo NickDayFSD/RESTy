@@ -4,8 +4,17 @@ import PropType from 'prop-types';
 import ReactJson from 'react-json-view';
 
 // eslint-disable-next-line react/prop-types
-const Results = (results) => {
-  console.log('RESULTS', results);
+const Results = (results, loading) => {
+  // eslint-disable-next-line keyword-spacing
+  if (loading === true)
+    return (
+      <>
+        <img
+          src="https://giphy.com/embed/PMD7JN8BHLnbcqSTL5/video"
+          alt="loading"
+        />
+      </>
+    );
 
   // eslint-disable-next-line keyword-spacing
   return (

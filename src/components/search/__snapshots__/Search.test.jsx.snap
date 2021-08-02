@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search component renders Search 1`] = `
+<DocumentFragment>
+  <div>
+    <form>
+      <label
+        for="url"
+        type="text"
+      />
+      <input
+        id="url"
+        name="url"
+        placeholder="url"
+        value=""
+      />
+      <label
+        for="get"
+      >
+        GET
+        <input
+          id="get"
+          name="CRUD"
+          style="visibility: hidden;"
+          type="radio"
+          value="GET"
+        />
+      </label>
+      <label
+        for="post"
+      >
+        POST
+        <input
+          id="post"
+          name="CRUD"
+          style="visibility: hidden;"
+          type="radio"
+          value="POST"
+        />
+      </label>
+      <label
+        for="put"
+      >
+        PUT
+        <input
+          id="put"
+          name="CRUD"
+          style="visibility: hidden;"
+          type="radio"
+          value="PUT"
+        />
+      </label>
+      <label
+        for="patch"
+      >
+        PATCH
+        <input
+          id="patch"
+          name="CRUD"
+          style="visibility: hidden;"
+          type="radio"
+          value="PATCH"
+        />
+      </label>
+      <label
+        for="delete"
+      >
+        DELETE
+        <input
+          id="delete"
+          name="CRUD"
+          style="visibility: hidden;"
+          type="radio"
+          value="DELETE"
+        />
+      </label>
+      <button>
+        GO!
+      </button>
+    </form>
+    <textarea
+      name="body"
+      placeholder="Raw JSON Body"
+    />
+  </div>
+</DocumentFragment>
+`;

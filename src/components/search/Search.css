@@ -1,0 +1,9 @@
+label {
+  padding: 4px 16px;
+  cursor: pointer;
+}
+
+input:checked {
+  background-color: #204060;
+  color: white;
+}

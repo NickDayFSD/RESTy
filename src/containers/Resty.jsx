@@ -5,6 +5,8 @@ import SearchField from '../components/search/Search';
 import Loader from '../components/loader/Loading';
 import Results from '../components/results/Results';
 
+import styles from './Resty.css';
+
 export default class Resty extends Component {
   state = {
     url: '',
